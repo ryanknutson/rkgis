@@ -1,6 +1,6 @@
 {
   "name": "@ryanknutson/rkgis",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "a fast no-api Google Images search",
   "main": "index.js",
   "scripts": {

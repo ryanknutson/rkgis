@@ -21,12 +21,11 @@ rkgis returns a promise, which you can use as follows
 rkgis('cats').then(e=>console.log(e))
 ```
 
-there are currently 3 options available, random, max, and returnfirst
+there are currently 2 options available, random, and max
 ```javascript
 rkgis('cats', {random: true, max: 5})
 ```
 random will shuffle the array, and max will limit the number of results
-returnfirst will return the first result as an object
 
 
 ## License

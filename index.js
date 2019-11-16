@@ -16,7 +16,7 @@ let shuffle = a => {
 }
 
 // returns a promise with an array of objects
-let rkgis = (query, {max = 0, random = false, returnfirst = false} = {}) => new Promise(async (resolve, reject) => {
+let rkgis = (query, {max = 0, random = false} = {}) => new Promise(async (resolve, reject) => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.goto(url(query))
@@ -46,7 +46,6 @@ let rkgis = (query, {max = 0, random = false, returnfirst = false} = {}) => new 
   // shuffle array
   res = random?shuffle(res):res
 
-  if (returnfirst) resolve(res[0])
   resolve(res)
 })
 
