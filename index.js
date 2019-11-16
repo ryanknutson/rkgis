@@ -30,6 +30,7 @@ let rkgis = (query, {max = 0, random = false} = {}) => new Promise(async (resolv
 
   // make the data easier to understand
   images = images.map(e=>({
+    query: query,
     title: e.pt,
     url: e.ou,
     height: e.oh,
