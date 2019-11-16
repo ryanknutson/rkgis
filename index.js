@@ -40,11 +40,11 @@ let rkgis = (query, {max = 0, random = false, returnfirst = false} = {}) => new 
 
   await browser.close()
 
-  // shuffle array
-  images = random?shuffle(images):images
-
   // if max is 0, return the max number of images
   let res = max?images.slice(0, max):images
+
+  // shuffle array
+  res = random?shuffle(res):res
 
   if (returnfirst) resolve(res[0])
   resolve(res)
