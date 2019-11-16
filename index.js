@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer')
 let url = x => "https://www.google.com/search?tbm=isch&q=" + encodeURIComponent(x);
 
 // returns a promise with an array of objects
-let rkgis = query => new Promise(async (resolve, reject) => {
+let rkgis = (query, results = 0) => new Promise(async (resolve, reject) => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.goto(url(query))
@@ -27,7 +27,11 @@ let rkgis = query => new Promise(async (resolve, reject) => {
   }))
 
   await browser.close()
-  resolve(images)
+
+  // if results is 0, return the max number of images
+  let res = results?images.slice(0, results):images
+
+  resolve(res)
 })
 
 module.exports = rkgis
