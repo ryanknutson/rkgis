@@ -1,0 +1,25 @@
+{
+  "name": "@ryanknutson/rkgis",
+  "version": "1.0.0",
+  "description": "a fast no-api Google Images search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanknutson/rkgis.git"
+  },
+  "keywords": [
+    "google",
+    "google",
+    "images",
+    "puppeteer"
+  ],
+  "author": "Ryan D. Knutson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanknutson/rkgis/issues"
+  },
+  "homepage": "https://github.com/ryanknutson/rkgis#readme"
+}
